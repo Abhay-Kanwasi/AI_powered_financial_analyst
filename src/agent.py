@@ -45,7 +45,7 @@ def create_financial_agent(pdf_text):
         tools=[pdf_tool],
         llm=chat_model,
         memory=memory,
-        verbose=True
+        verbose=False
     )
 
     return agent

@@ -14,11 +14,8 @@ A powerful AI-driven tool that analyzes financial reports from PDF files using L
 - [System Requirements](#system-requirements)
 - [Installation](#installation)
 - [Usage](#usage)
-  - [Command Line Interface](#command-line-interface)
-  - [Streamlit Web Interface](#streamlit-web-interface)
 - [Project Structure](#project-structure)
 - [How It Works](#how-it-works)
-- [Optional OCR Support](#optional-ocr-support)
 - [Troubleshooting](#troubleshooting)
 - [Contributing](#contributing)
 - [License](#license)
@@ -33,13 +30,10 @@ The AI-Powered Financial Analyst is designed to help users quickly extract insig
 - **Advanced Financial Analysis**: Powered by Groq's LLama-3 model (70B parameters)
 - **Conversational AI Agent**: Interact with your financial data through natural language
 - **Memory Capabilities**: The AI remembers context from your conversation
-- **Dual Interface Options**:
-  - Command-line interface for quick access
-  - Streamlit web interface for a more user-friendly experience
+- **User-Friendly Interface**: Streamlit web interface for easy interaction
 - **PDF Upload**: Easily upload PDF files through the web interface
 - **Chat History**: View and track your conversation with the AI analyst
 - **Error Handling**: Clear messages for non-text PDFs and extraction issues
-- **Optional OCR Support**: Can be enabled for scanned or image-based PDFs
 
 ## 💻 System Requirements
 
@@ -78,19 +72,6 @@ The AI-Powered Financial Analyst is designed to help users quickly extract insig
 
 ## 🚀 Usage
 
-### Command Line Interface
-
-1. Place your financial PDF report in the `data/` directory
-2. Run the application:
-   ```bash
-   python main.py
-   ```
-3. If multiple PDFs are in the directory, you'll be prompted to select one
-4. Once the PDF is processed, you can ask questions about the financial report
-5. Type 'exit' or 'quit' to end the session
-
-### Streamlit Web Interface
-
 1. Launch the Streamlit app:
    ```bash
    streamlit run app.py
@@ -106,15 +87,11 @@ The AI-Powered Financial Analyst is designed to help users quickly extract insig
 .
 ├── app.py                 # Streamlit web interface
 ├── config.py              # Configuration settings
-├── data/                  # Directory for PDF files
-├── main.py                # Command-line interface
 ├── requirements.txt       # Project dependencies
-├── setup_ocr.sh           # Script for setting up OCR
 └── src/                   # Source code
     ├── agent.py           # LangChain agent implementation
     ├── extraction.py      # PDF text extraction functions
-    ├── models.py          # LLM model configuration
-    └── utils.py           # Utility functions
+    └── models.py          # LLM model configuration
 ```
 
 ## ⚙️ How It Works
@@ -124,32 +101,6 @@ The AI-Powered Financial Analyst is designed to help users quickly extract insig
 3. **Agent Creation**: A conversational agent is created with the financial report context
 4. **User Interaction**: Users can ask questions about the report in natural language
 5. **Response Generation**: The AI analyzes the report and generates informative responses
-
-## 📷 Optional OCR Support
-
-If you need to extract text from scanned or image-based PDFs, you can enable OCR support:
-
-1. Uncomment the OCR dependencies in `requirements.txt`:
-   ```
-   pytesseract>=0.3.10
-   Pillow>=9.0.0
-   ```
-
-2. Install the updated dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Install Tesseract OCR on your system:
-   ```bash
-   # Run the setup script
-   bash setup_ocr.sh
-   ```
-
-   Or follow platform-specific instructions:
-   - **Linux**: `sudo apt-get install tesseract-ocr`
-   - **macOS**: `brew install tesseract`
-   - **Windows**: Download from [UB-Mannheim/tesseract](https://github.com/UB-Mannheim/tesseract/wiki)
 
 ## ❓ Troubleshooting
 

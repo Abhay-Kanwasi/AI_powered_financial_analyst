@@ -3,7 +3,3 @@ pymupdf>=1.23.0
 langchain-community>=0.0.16
 python-dotenv>=1.0.0
 streamlit>=1.30.0
-
-# Optional OCR dependencies
-# pytesseract>=0.3.10
-# Pillow>=9.0.0
